@@ -28,6 +28,12 @@ int main() {
 	if (t != 0) {
 		energy = power * t;
 	}
-	cout << voltage << " " << R << " " << amperage << " " << power << " " << t << " " << energy;
+	cout << "voltage = " << voltage << '\n' 
+		<< "resist = " << R << '\n' 
+		<< "amperage = " << amperage << '\n' 
+		<< "power = " << power << '\n' 
+		<< "time = " << t << '\n' 
+		<< "energy = " << energy;
+
 	return 0;
 }
