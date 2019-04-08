@@ -13,8 +13,16 @@ int main() {
 	float voltage; //напряжение в цепи
 	cin >> voltage;
 
-	float R; //сопротивление в цепи
-	cin >> R;
+	float R = 0; //сопротивление в цепи
+	int n;
+	cin >> n;
+	float *arr = new float[n];
+	float g = 0;
+	for (int i = 0; i <= n; i++) {
+		cin >> g;
+		arr[i] = g;
+		R = R + g;
+	}
 
 	float amperage; //сила тока в цепи
 	amperage = (voltage / R);
@@ -28,12 +36,12 @@ int main() {
 	if (t != 0) {
 		energy = power * t;
 	}
-	cout << "voltage = " << voltage << '\n' 
-		<< "resist = " << R << '\n' 
-		<< "amperage = " << amperage << '\n' 
-		<< "power = " << power << '\n' 
-		<< "time = " << t << '\n' 
+	cout << "voltage = " << voltage << '\n'
+		<< "resist = " << R << '\n'
+		<< "amperage = " << amperage << '\n'
+		<< "power = " << power << '\n'
+		<< "time = " << t << '\n'
 		<< "energy = " << energy;
-
+	delete[] arr;
 	return 0;
 }
