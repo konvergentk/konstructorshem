@@ -8,10 +8,12 @@ struct resistor {
 };
 
 int main() {
-	cout << "enter a voltage";
+	cout << "enter a voltage = ";
 
 	float voltage; //напряжение в цепи
 	cin >> voltage;
+
+	cout << "enter number of resistors = ";
 
 	float R = 0; //сопротивление в цепи
 	int n;
@@ -19,6 +21,7 @@ int main() {
 	float *arr = new float[n];
 	float g = 0;
 	for (int i = 0; i <= n; i++) {
+		cout << "resistance " << i << " = ";
 		cin >> g;
 		arr[i] = g;
 		R = R + g;
@@ -30,13 +33,16 @@ int main() {
 	float power; //мощность цепи
 	power = voltage * amperage;
 
+	cout << "enter the time = ";
+
 	int t; //время работы
 	float energy; //работа
 	cin >> t;
 	if (t != 0) {
 		energy = power * t;
 	}
-	cout << "voltage = " << voltage << '\n'
+	cout << '\n' 
+		<< "voltage = " << voltage << '\n'
 		<< "resist = " << R << '\n'
 		<< "amperage = " << amperage << '\n'
 		<< "power = " << power << '\n'
