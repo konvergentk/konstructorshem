@@ -3,11 +3,8 @@
 #include <cmath>
 using namespace std;
 
-struct resistor {
-	float resistance; // значение сопротивления на одном резисторе
-};
-
-int main() {
+int main() 
+{
 	cout << "enter a voltage = ";
 
 	float voltage; //напряжение в цепи
@@ -18,10 +15,12 @@ int main() {
 	float R = 0; //сопротивление в цепи
 	int n;
 	cin >> n;
+	n = n - 1;
 	float *arr = new float[n];
 	float g = 0;
-	for (int i = 0; i <= n; i++) {
-		cout << "resistance " << i << " = ";
+	for (int i = 0; i <= n; i++)
+	{
+		cout << "resistance " << i + 1 << " = ";
 		cin >> g;
 		arr[i] = g;
 		R = R + g;
@@ -38,7 +37,8 @@ int main() {
 	int t; //время работы
 	float energy; //работа
 	cin >> t;
-	if (t != 0) {
+	if (t != 0) 
+	{
 		energy = power * t;
 	}
 	cout << '\n' 
@@ -47,7 +47,8 @@ int main() {
 		<< "amperage = " << amperage << '\n'
 		<< "power = " << power << '\n'
 		<< "time = " << t << '\n'
-		<< "energy = " << energy;
+		<< "energy = " << energy << '\n';
+
 	delete[] arr;
 	return 0;
 }
