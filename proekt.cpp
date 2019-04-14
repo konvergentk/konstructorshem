@@ -16,14 +16,32 @@ int main()
 	int n;
 	cin >> n;
 	n = n - 1;
+	int q = 0;
 	float *arr = new float[n];
-	float g = 0;
+	float g1 = 0, g2 = 0, r = 0;
 	for (int i = 0; i <= n; i++)
 	{
-		cout << "resistance " << i + 1 << " = ";
-		cin >> g;
-		arr[i] = g;
-		R = R + g;
+		cout << "0 or 1 ";
+		cin >> q;
+		if (q == 0)
+		{
+			cout << "resistance " << i + 1 << " = ";
+			cin >> g1;
+			cout << "resistance " << i + 2 << " = ";
+			cin >> g2;
+			arr[i] = g1;
+			i = i + 1;
+			arr[i] = g2;
+			r = (g1 * g2) / (g1 + g2);
+		}
+		else
+		{
+			cout << "resistance " << i + 1 << " = ";
+			cin >> g1;
+			arr[i] = g1;
+			r = g1;
+		}
+		R = R + r;
 	}
 
 	float amperage; //сила тока в цепи
