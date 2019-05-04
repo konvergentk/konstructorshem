@@ -29,7 +29,7 @@ int main()
 		e,
 		q,
 		j,
-		y;//хз как работающий пиздец, делал на ощуп
+		y;
 	cin >> n;
 	n = n - 1;
 	float *arr = new float[n];
